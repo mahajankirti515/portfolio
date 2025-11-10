@@ -71,18 +71,18 @@ export const DATA = {
   },
 
   work: [
-    {
-      company: "FlashTech",
-      badges: [],
-      href: "",
-      location: "Remote",
-      title: "AI Engineer Intern",
-      logoUrl: "/flash_tech_company_logo.jpg",
-      start: "Oct 2025",
-      end: "Present",
-      description:
-        "Built AI agents using n8n to automate workflows and developed a RAG (Retrieval-Augmented Generation) agent for intelligent data retrieval and response generation. Integrated these AI features into web dashboards using React and Node.js, improving automation and user experience.",
-    },
+    // {
+    //   company: "FlashTech",
+    //   badges: [],
+    //   href: "",
+    //   location: "Remote",
+    //   title: "AI Engineer Intern",
+    //   logoUrl: "/flash_tech_company_logo.jpg",
+    //   start: "Oct 2025",
+    //   end: "Present",
+    //   description:
+    //     "Built AI agents using n8n to automate workflows and developed a RAG (Retrieval-Augmented Generation) agent for intelligent data retrieval and response generation. Integrated these AI features into web dashboards using React and Node.js, improving automation and user experience.",
+    // },
     {
       company: "Eulogik",
       href: "https://eulogik.com/",
@@ -91,7 +91,7 @@ export const DATA = {
       title: "Web Developer",
       logoUrl: "/eulogik-fav.ico",
       start: "May 2025",
-      end: "Sep 2025",
+      end: "Present",
       description:
         "At Eulogik, I worked as a Web Developer focusing on front-end performance and user experience. Built responsive UIs using React and Next.js, reducing page load time by 40%. Collaborated with designers and backend developers to create a testing dashboard that improved workflow efficiency.",
     },
