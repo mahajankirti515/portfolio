@@ -71,18 +71,6 @@ export const DATA = {
   },
 
   work: [
-    // {
-    //   company: "FlashTech",
-    //   badges: [],
-    //   href: "",
-    //   location: "Remote",
-    //   title: "AI Engineer Intern",
-    //   logoUrl: "/flash_tech_company_logo.jpg",
-    //   start: "Oct 2025",
-    //   end: "Present",
-    //   description:
-    //     "Built AI agents using n8n to automate workflows and developed a RAG (Retrieval-Augmented Generation) agent for intelligent data retrieval and response generation. Integrated these AI features into web dashboards using React and Node.js, improving automation and user experience.",
-    // },
     {
       company: "Eulogik",
       href: "https://eulogik.com/",
