@@ -166,128 +166,150 @@ export const DATA = {
       end: "2018",
     },
   ],
-  projects: [
-    {
-      title: "vingo_food_delivery",
-      href: "https://chatcollect.com",
-      dates: "Aug 2025 - Sep 2025",
-      active: true,
-      description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
-      technologies: [
-        "React.js",
-        "TailwindCSS",
-        "Nodejs",
-        "Express",
-        "Mongodb",
-        "Razorpay",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://vingo-8hz8.onrender.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/mahajankirti515/vingo_food_delivery",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-    },
-    {
-      title: "Setkorp",
-      href: "https://github.com/mahajankirti515/setkorp",
-      dates: "Sep 2025 - Present",
-      active: true,
-      description:
-        "Designed, developed and sold animated UI components for developers.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://setkorp-three.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/mahajankirti515/setkorp",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "Car-Rental-Website",
-      href: "https://llm.report",
-      dates: "Sep 2025",
-      active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "React.js",
-        "Nodejs",
-        "Express",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "MongoDB",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/mahajankirti515/Car-Rental-Website",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
-    {
-      title: "Music-App",
-      href: "https://music-app-zeta-two.vercel.app/",
-      dates: "March 2025",
-      active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-      technologies: [
-        "React.js",
-        "TailwindCSS",
-        "Redux",
-        "React Router Dom",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://music-app-zeta-two.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/mahajankirti515/music-app",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    },
-  ],
+projects: [
+  {
+    title: "Food-Delivery-App-like Zomato",
+    href: "https://vingo-8hz8.onrender.com/",
+    dates: "Aug 2025 - Sep 2025",
+    active: true,
+    description: "A MERN stack-based food delivery application inspired by Swiggy and Zomato, featuring live order tracking, secure payments with Razorpay, and a responsive UI designed with React.js and TailwindCSS.",
+    technologies: ["React.js", "TailwindCSS", "Nodejs", "Express", "Mongodb", "Razorpay"],
+    links: [
+      { type: "Website", href: "https://vingo-8hz8.onrender.com", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/vingo_food_delivery", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4"
+  },
+  {
+    title: "Setkorp",
+    href: "https://setkorp-three.vercel.app/",
+    dates: "Sep 2025 - Present",
+    active: true,
+    description: "Designed, developed and sold animated UI components for developers.",
+    technologies: ["Next.js", "Typescript", "TailwindCSS", "Shadcn UI", "Magic UI"],
+    links: [
+      { type: "Website", href: "https://setkorp-three.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/setkorp", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "https://cdn.magicui.design/bento-grid.mp4"
+  },
+  {
+    title: "Car-Rental-Website",
+    href: "https://llm.report",
+    dates: "Sep 2025",
+    active: true,
+    description: "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+    technologies: ["React.js", "Nodejs", "Express", "TailwindCSS", "Shadcn UI", "Magic UI", "MongoDB"],
+    links: [
+      { type: "Website", href: "https://llm.report", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/Car-Rental-Website", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "https://cdn.llm.report/openai-demo.mp4"
+  },
+  {
+    title: "Music-App",
+    href: "https://music-app-zeta-two.vercel.app/",
+    dates: "March 2025",
+    active: true,
+    description: "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+    technologies: ["React.js", "TailwindCSS", "Redux", "React Router Dom"],
+    links: [
+      { type: "Website", href: "https://music-app-zeta-two.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/music-app", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4"
+  },
+  {
+    title: "Blinkit-Clone-MERN-App",
+    href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App",
+    dates: "2024 - 2025",
+    active: false,
+    description: "An e-commerce grocery store clone built with the MERN stack featuring user authentication and cart management.",
+    technologies: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "CSS"],
+    links: [
+       { type: "Website", href: "https://setkorp-three.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: ""
+  },
+  {
+    title: "Food-Delivery-App",
+    href: "https://food-del-chi-snowy.vercel.app/",
+    dates: "2023 - 2024",
+    active: false,
+    description: "A React-based food delivery app inspired by top platforms, built for learning and exploration purposes.",
+    technologies: ["React.js", "CSS"],
+    links: [
+      { type: "Website", href: "https://food-del-chi-snowy.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/food-del", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: ""
+  },
+  {
+    title: "Youtube-clone",
+    href: "https://youtub-clone-one.vercel.app/",
+    dates: "2023",
+    active: false,
+    description: "A minimal YouTube UI clone with video thumbnails and interactive video playing experience.",
+    technologies: ["React.js", "CSS"],
+    links: [
+      { type: "Website", href: "https://youtub-clone-one.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/youtub-clone", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: ""
+  },
+  {
+    title: "Shopping-cart",
+    href: "https://shoping-cart-blush.vercel.app/",
+    dates: "2022",
+    active: false,
+    description: "A shopping cart project built with React.js that manages cart items and quantities efficiently.",
+    technologies: ["React.js", "CSS"],
+    links: [
+      { type: "Website", href: "https://shoping-cart-blush.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/shoping-cart", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: ""
+  },
+  {
+    title: "Dice-Game",
+    href: "https://dice-game-xi-nine.vercel.app/",
+    dates: "2022",
+    active: false,
+    description: "A browser dice game that includes user interaction and random number generation, built with vanilla JavaScript and HTML5.",
+    technologies: ["JavaScript", "HTML5", "CSS"],
+    links: [
+      { type: "Website", href: "https://dice-game-xi-nine.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/dice-game", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: ""
+  },
+  {
+    title: "Netflix-clone",
+    href: "https://netflix-azure.vercel.app/",
+    dates: "2023",
+    active: false,
+    description: "A Netflix UI clone built with React.js and integrated with movie data APIs for dynamic content display.",
+    technologies: ["React.js", "CSS", "API Integration"],
+    links: [
+      { type: "Website", href: "https://netflix-azure.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/Netflix", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: ""
+  }
+]
+
+,
   hackathons: [
     {
       title: "Hack Western 5",
