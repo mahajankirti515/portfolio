@@ -62,10 +62,10 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:mahajankirti515@gmail.com",
         icon: Icons.email,
 
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -168,20 +168,20 @@ export const DATA = {
   ],
 projects: [
   {
-    title: "Food-Delivery-App-like Zomato",
-    href: "https://vingo-8hz8.onrender.com/",
-    dates: "Aug 2025 - Sep 2025",
-    active: true,
-    description: "A MERN stack-based food delivery application inspired by Swiggy and Zomato, featuring live order tracking, secure payments with Razorpay, and a responsive UI designed with React.js and TailwindCSS.",
-    technologies: ["React.js", "TailwindCSS", "Nodejs", "Express", "Mongodb", "Razorpay"],
+    title: "Food-Delivery-App",
+    href: "https://food-del-chi-snowy.vercel.app/",
+    dates: "2023 - 2024",
+    active: false,
+    description: "A React-based food delivery app inspired by top platforms, built for learning and exploration purposes.",
+    technologies: ["React.js", "CSS"],
     links: [
-      { type: "Website", href: "https://vingo-8hz8.onrender.com", icon: <Icons.globe className="size-3" /> },
-      { type: "Source", href: "https://github.com/mahajankirti515/vingo_food_delivery", icon: <Icons.github className="size-3" /> }
+      { type: "Website", href: "https://food-del-chi-snowy.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/food-del", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4"
+    video: "/Food-Delivery-App.mp4"
   },
-  {
+   {
     title: "Setkorp",
     href: "https://setkorp-three.vercel.app/",
     dates: "Sep 2025 - Present",
@@ -193,7 +193,35 @@ projects: [
       { type: "Source", href: "https://github.com/mahajankirti515/setkorp", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: "https://cdn.magicui.design/bento-grid.mp4"
+    video: "/setkorp-video.mp4"
+  },
+  {
+    title: "Food-Delivery-App-like Zomato",
+    href: "https://vingo-8hz8.onrender.com/",
+    dates: "Aug 2025 - Sep 2025",
+    active: true,
+    description: "A MERN stack-based food delivery application inspired by Swiggy and Zomato, featuring live order tracking, secure payments with Razorpay, and a responsive UI designed with React.js and TailwindCSS.",
+    technologies: ["React.js", "TailwindCSS", "Nodejs", "Express", "Mongodb", "Razorpay"],
+    links: [
+      { type: "Website", href: "https://vingo-8hz8.onrender.com", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/vingo_food_delivery", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "/Zomato.mp4"
+  },
+  {
+    title: "E-Commerce Website",
+    href: "https://ecommerse-website-hazel.vercel.app/",
+    dates: "2022",
+    active: false,
+    description: "A full-featured e-commerce website with product catalog, shopping cart, and user authentication built with React.js.",
+    technologies: ["React.js", "CSS"],
+    links: [
+      { type: "Website", href: "https://ecommerse-website-hazel.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/e_commerse_website", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "/Ecommerce.mp4"
   },
   {
     title: "Car-Rental-Website",
@@ -221,63 +249,7 @@ projects: [
       { type: "Source", href: "https://github.com/mahajankirti515/music-app", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4"
-  },
-  {
-    title: "Blinkit-Clone-MERN-App",
-    href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App",
-    dates: "2024 - 2025",
-    active: false,
-    description: "An e-commerce grocery store clone built with the MERN stack featuring user authentication and cart management.",
-    technologies: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "CSS"],
-    links: [
-       { type: "Website", href: "https://setkorp-three.vercel.app/", icon: <Icons.globe className="size-3" /> },
-      { type: "Source", href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App", icon: <Icons.github className="size-3" /> }
-    ],
-    image: "",
-    video: ""
-  },
-  {
-    title: "Food-Delivery-App",
-    href: "https://food-del-chi-snowy.vercel.app/",
-    dates: "2023 - 2024",
-    active: false,
-    description: "A React-based food delivery app inspired by top platforms, built for learning and exploration purposes.",
-    technologies: ["React.js", "CSS"],
-    links: [
-      { type: "Website", href: "https://food-del-chi-snowy.vercel.app/", icon: <Icons.globe className="size-3" /> },
-      { type: "Source", href: "https://github.com/mahajankirti515/food-del", icon: <Icons.github className="size-3" /> }
-    ],
-    image: "",
-    video: ""
-  },
-  {
-    title: "Youtube-clone",
-    href: "https://youtub-clone-one.vercel.app/",
-    dates: "2023",
-    active: false,
-    description: "A minimal YouTube UI clone with video thumbnails and interactive video playing experience.",
-    technologies: ["React.js", "CSS"],
-    links: [
-      { type: "Website", href: "https://youtub-clone-one.vercel.app/", icon: <Icons.globe className="size-3" /> },
-      { type: "Source", href: "https://github.com/mahajankirti515/youtub-clone", icon: <Icons.github className="size-3" /> }
-    ],
-    image: "",
-    video: ""
-  },
-  {
-    title: "Shopping-cart",
-    href: "https://shoping-cart-blush.vercel.app/",
-    dates: "2022",
-    active: false,
-    description: "A shopping cart project built with React.js that manages cart items and quantities efficiently.",
-    technologies: ["React.js", "CSS"],
-    links: [
-      { type: "Website", href: "https://shoping-cart-blush.vercel.app/", icon: <Icons.globe className="size-3" /> },
-      { type: "Source", href: "https://github.com/mahajankirti515/shoping-cart", icon: <Icons.github className="size-3" /> }
-    ],
-    image: "",
-    video: ""
+    video: "/Music-app.mp4"
   },
   {
     title: "Dice-Game",
@@ -291,8 +263,26 @@ projects: [
       { type: "Source", href: "https://github.com/mahajankirti515/dice-game", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: ""
+    video: "/Dice-Game.mp4"
   },
+ 
+  
+  {
+    title: "Youtube-clone",
+    href: "https://youtub-clone-one.vercel.app/",
+    dates: "2023",
+    active: false,
+    description: "A minimal YouTube UI clone with video thumbnails and interactive video playing experience.",
+    technologies: ["React.js", "CSS"],
+    links: [
+      { type: "Website", href: "https://youtub-clone-one.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/youtub-clone", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "/youtube-clone.mp4"
+  },
+ 
+  
   {
     title: "Netflix-clone",
     href: "https://netflix-azure.vercel.app/",
@@ -305,8 +295,22 @@ projects: [
       { type: "Source", href: "https://github.com/mahajankirti515/Netflix", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
+    video: "/Netflix.mp4"
+  },
+   {
+    title: "Blinkit-Clone-MERN-App",
+    href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App",
+    dates: "2024 - 2025",
+    active: false,
+    description: "An e-commerce grocery store clone built with the MERN stack featuring user authentication and cart management.",
+    technologies: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "CSS"],
+    links: [
+       { type: "Website", href: "https://setkorp-three.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
     video: ""
-  }
+  },
 ]
 
 ,

@@ -1,3 +1,4 @@
+"use client";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -8,6 +9,10 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { TracingBeam } from "@/components/ui/tracing-beam";
+import { Icons } from "@/components/icons";
+import { LampContainer } from "@/components/ui/lamp";
+import { motion } from "framer-motion";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -112,6 +117,7 @@ export default function Page() {
         </div>
       </section>
       <section id="projects">
+        <TracingBeam>
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -151,6 +157,7 @@ export default function Page() {
             ))}
           </div>
         </div>
+        </TracingBeam>
       </section>
       {/* <section id="hackathons">
         <div className="space-y-12 w-full py-12">
@@ -206,16 +213,24 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                Want to chat? Reach out to me through any of these platforms:
               </p>
+              <div className="flex justify-center gap-4 mt-6">
+                <Link
+                  href="https://wa.me/917987311916"
+                  className="flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-accent transition-colors"
+                >
+                  <Icons.whatsapp className="size-4" />
+                  WhatsApp
+                </Link>
+                <Link
+                  href="mailto:mahajankirti515@gmail.com"
+                  className="flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-accent transition-colors"
+                >
+                  <Icons.email className="size-4" />
+                  Email
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>
