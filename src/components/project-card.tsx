@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useRef, useEffect, useState } from "react";
 
 interface Props {
   title: string;
@@ -40,6 +41,18 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (videoRef.current) observer.observe(videoRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Card
       className={
@@ -52,12 +65,14 @@ export function ProjectCard({
       >
         {video && (
           <video
-            src={video}
-            autoPlay
+            ref={videoRef}
+            src={isVisible ? video : undefined}
+            autoPlay={isVisible}
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            preload="none"
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top bg-muted" // needed because random black line at bottom of video
           />
         )}
         {image && (
