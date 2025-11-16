@@ -60,7 +60,6 @@ export const ResumeCard = ({
                 muted
                 playsInline
                 preload="none"
-                loading="lazy"
                 className="object-contain w-full h-full rounded-full"
               />
             ) : (

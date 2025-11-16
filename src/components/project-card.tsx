@@ -72,7 +72,6 @@ export function ProjectCard({
             muted
             playsInline
             preload="none"
-            loading="lazy"
             className="pointer-events-none mx-auto h-40 w-full object-contain bg-muted"
           />
         )}
