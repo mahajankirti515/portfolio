@@ -63,7 +63,7 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       }
     )
-  }, [theme, duration])
+  }, [theme, duration, setTheme])
 
   return (
     <button
