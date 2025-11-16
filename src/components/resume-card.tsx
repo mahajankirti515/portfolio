@@ -59,7 +59,7 @@ export const ResumeCard = ({
                 loop
                 muted
                 playsInline
-                preload="none"
+                preload="metadata"
                 className="object-contain w-full h-full rounded-full"
               />
             ) : (
