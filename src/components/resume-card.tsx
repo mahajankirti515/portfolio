@@ -30,6 +30,7 @@ export const ResumeCard = ({
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
@@ -45,13 +46,28 @@ export const ResumeCard = ({
       onClick={handleClick}
     >
       <Card className="flex">
-        <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className="object-contain"
-            />
+        <div 
+          className="flex-none"
+          onMouseEnter={() => videoRef.current?.play()}
+          onMouseLeave={() => videoRef.current?.pause()}
+        >
+          <Avatar className="border size-10 m-auto bg-muted-background dark:bg-foreground">
+            {logoUrl.endsWith('.mp4') ? (
+              <video
+                ref={videoRef}
+                src={logoUrl}
+                loop
+                muted
+                playsInline
+                className="object-contain w-full h-full rounded-full"
+              />
+            ) : (
+              <AvatarImage
+                src={logoUrl}
+                alt={altText}
+                className="object-contain"
+              />
+            )}
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>

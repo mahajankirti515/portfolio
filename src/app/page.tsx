@@ -18,7 +18,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="relative flex flex-col min-h-[100dvh] space-y-10 ">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -49,9 +49,57 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
+          <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            <p>
+              I specialize in building AI agents and automation flows with n8n, including RAG, image AI, and WhatsApp/Telegram bots. With strong experience in React and Next.js, I build clean and scalable web apps.
+            </p>
+            <p>
+              My goal is to create products where AI automation removes manual work and improves business efficiency. Currently working at{" "}
+              <a 
+                href="#work" 
+                className="underline underline-offset-4 hover:text-foreground transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Eulogik
+              </a>
+              {" "}and building exciting{" "}
+              <a 
+                href="#projects" 
+                className="underline underline-offset-4 hover:text-foreground transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                projects
+              </a>
+              .
+            </p>
+            <p>
+              I regularly practice coding challenges on{" "}
+              <a 
+                href="https://leetcode.com/u/mahajankirti515" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-foreground transition-colors"
+              >
+                LeetCode
+              </a>
+              {" "}and{" "}
+              <a 
+                href="https://www.codechef.com/users/kirti515" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-foreground transition-colors"
+              >
+                CodeChef
+              </a>
+              {" "}to sharpen my problem-solving skills.
+            </p>
+          </div>
         </BlurFade>
       </section>
       <section id="work">
@@ -73,7 +121,7 @@ export default function Page() {
                 href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${(work as any).end ?? "Present"}`}
-                description={work.description}
+                description={work.description as string | string[]}
               />
             </BlurFade>
           ))}

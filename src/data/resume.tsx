@@ -3,28 +3,44 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 // k
 export const DATA = {
   name: "Kirti Wankhede",
-  initials: "DV",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  initials: "KW",
+  url: "https://mahajankirti515.vercel.app/",
+  location: "Indore,Madhya Pradesh, India",
+  locationLink: "https://www.google.com/maps/place/Indore,+Madhya+Pradesh,+India/",
   description:
-    "Full-Stack Developer 🚀 I love building cool things that make life easier. Sharing my dev journey & ideas here.",
+    "Full-Stack Developer + AI Automation 🚀Building cool things with React, Next.js, and n8n.",
   summary:
-    "In 2025, I started my journey as a Full-Stack Developer focused on building fast, responsive, and scalable web applications. After completing my MCA, I worked with Eulogik and TechSimPlus, where I built real-world React and Next.js projects that improved performance and usability. I’m passionate about creating modern web solutions, exploring new technologies, and helping businesses grow through clean, functional design.",
+    "I specialize in building AI agents and automation flows with n8n, including RAG, image AI, and WhatsApp/Telegram bots.With strong experience in React and Next.js, I build clean and scalable web apps.My goal is to create products where AI automation removes manual work and improves business efficiency.",
   avatarUrl: "/me.jpg",
   skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
-    "Python",
-    "fastapi",
-    "Postgres",
-    "Express",
-    "MongoDB",
-    "JavaScript",
-    "C++",
-  ],
+  "React",
+  "Next.js",
+  "Redux",
+  "ContextApi",
+  "TypeScript",
+  "Node.js",
+  "Python",
+  "FastAPI",
+  "Postgres",
+  "Express",
+  "MongoDB",
+  "JavaScript",
+  "C++",
+  "DataStructures & Algorithms",
+
+  // AI & Automation
+  "n8n",
+  "SupaBase",
+  "ChatBot Development",
+  "RAG (Retrieval Augmented Generation)",
+  "Prompt Engineering",
+  "Cursor AI",
+  "Claude",
+  "Gemini CLI",
+  "Amazon Q",
+  "OpenAI",
+],
+
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -60,6 +76,12 @@ export const DATA = {
         icon: Icons.youtube,
         navbar: true,
       },
+      LeetCode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/u/mahajankirti515",
+        icon: Icons.leetcode,
+        navbar: false,
+      },
       email: {
         name: "Send Email",
         url: "mailto:mahajankirti515@gmail.com",
@@ -71,6 +93,7 @@ export const DATA = {
   },
 
   work: [
+    
     {
       company: "Eulogik",
       href: "https://eulogik.com/",
@@ -80,9 +103,28 @@ export const DATA = {
       logoUrl: "/eulogik-fav.ico",
       start: "May 2025",
       end: "Present",
-      description:
-        "At Eulogik, I worked as a Web Developer focusing on front-end performance and user experience. Built responsive UIs using React and Next.js, reducing page load time by 40%. Collaborated with designers and backend developers to create a testing dashboard that improved workflow efficiency.",
+      description: [
+        "Worked as a Web Developer focusing on front-end performance and user experience.",
+        "Built responsive UIs using React and Next.js, reducing page load time by 40%.",
+        "Collaborated with designers and backend developers to create a testing dashboard that improved workflow efficiency."
+      ],
     },
+    {
+  company: "FlashTech",
+  href: "https://flash-tech.co/",
+  badges: [],
+  location: "Dubai",
+  title: "AI Engineer Intern",
+  logoUrl: "/flash_tech_company_logo.jpg",
+  start: "January 2025",
+  end: "April 2025",
+  description: [
+    "Built multiple AI agents using n8n for different automation use cases.",
+    "Developed a RAG-based HR Manual Agent that provides accurate answers from internal documents.",
+    "Created an Image Generation AI Agent integrated with Telegram to edit, generate, or combine images based on prompts."
+  ],
+},
+
     {
       company: "TechSimPlus",
       href: "https://www.techsimplus.com/",
@@ -90,10 +132,13 @@ export const DATA = {
       location: "Bhopal",
       title: "Frontend Devloper",
       logoUrl: "/techsimplus.png",
-      start: "Oct 2024",
-      end: "Dec 2024",
-      description:
-        "Worked on React.js to develop and optimize responsive user interfaces. Built reusable components and improved form performance using React Hooks while learning best frontend development practices.",
+      start: "October 2024",
+      end: "December 2024",
+      description: [
+        "Worked on React.js to develop and optimize responsive user interfaces.",
+        "Built reusable components and improved form performance using React Hooks.",
+        "Learned best frontend development practices while working on real projects."
+      ],
     },
     // {
     //   company: "Splunk",
@@ -145,7 +190,7 @@ export const DATA = {
       school: "Seva Sadan Mahavidyalaya Burhanpur",
       href: "https://sevasadancollege.com/",
       degree: "Bachelor of Computer Application (BCA)",
-      logoUrl: "/sevasadan.jpg",
+      logoUrl: "/graduation-cap.mp4",
       start: "2020",
       end: "2023",
     },
@@ -153,7 +198,7 @@ export const DATA = {
       school: "Govt.H.S.School Bambhada, Burhanpur",
       // href: "https://sevasadancollege.com/",
       degree: "12th (Math Science)",
-      logoUrl: "/govt.jpg",
+      logoUrl: "/school.mp4",
       start: "2019",
       end: "2020",
     },
@@ -161,12 +206,13 @@ export const DATA = {
       school: "Govt.H.S.School Bambhada, Burhanpur",
       // href: "https://sevasadancollege.com/",
       degree: "10th",
-      logoUrl: "/govt.jpg",
+      logoUrl: "/school.mp4",
       start: "2017",
       end: "2018",
     },
   ],
 projects: [
+  
   {
     title: "Food-Delivery-App",
     href: "https://food-del-chi-snowy.vercel.app/",
@@ -194,6 +240,20 @@ projects: [
     ],
     image: "",
     video: "/setkorp-video.mp4"
+  },
+  {
+    title: "LegalZoom Clone",
+    href: "https://legalzoom-jet.vercel.app/",
+    dates: "Nov 2025",
+    active: true,
+    description: "A comprehensive legal services platform clone featuring document preparation, business formation services, and legal consultation booking with modern UI/UX.",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI"],
+    links: [
+      { type: "Website", href: "https://legalzoom-jet.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/legalzoom", icon: <Icons.github className="size-3" /> }
+    ],
+    image: "",
+    video: "/legalzoom.mp4"
   },
   {
     title: "Food-Delivery-App-like Zomato",
@@ -231,11 +291,11 @@ projects: [
     description: "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
     technologies: ["React.js", "Nodejs", "Express", "TailwindCSS", "Shadcn UI", "Magic UI", "MongoDB"],
     links: [
-      { type: "Website", href: "https://llm.report", icon: <Icons.globe className="size-3" /> },
+      { type: "Website", href: "https://github.com/mahajankirti515/Car-Rental-Website", icon: <Icons.globe className="size-3" /> },
       { type: "Source", href: "https://github.com/mahajankirti515/Car-Rental-Website", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: "https://cdn.llm.report/openai-demo.mp4"
+    video: "/car-rental.mp4"
   },
   {
     title: "Music-App",
@@ -305,11 +365,11 @@ projects: [
     description: "An e-commerce grocery store clone built with the MERN stack featuring user authentication and cart management.",
     technologies: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "CSS"],
     links: [
-       { type: "Website", href: "https://setkorp-three.vercel.app/", icon: <Icons.globe className="size-3" /> },
+       { type: "Website", href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App", icon: <Icons.globe className="size-3" /> },
       { type: "Source", href: "https://github.com/mahajankirti515/Blinkit-Clone-MERN-App", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: ""
+    video: "/blinkit-clone.mp4"
   },
 ]
 

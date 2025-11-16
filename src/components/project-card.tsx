@@ -72,7 +72,7 @@ export function ProjectCard({
             muted
             playsInline
             preload="none"
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top bg-muted" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-contain bg-muted" // needed because random black line at bottom of video
           />
         )}
         {image && (
