@@ -13,12 +13,15 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Icons } from "@/components/icons";
 import { LampContainer } from "@/components/ui/lamp";
 import { motion } from "framer-motion";
+import CanvasCursor from "@/components/canvas-cursor";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="relative flex flex-col min-h-[100dvh] space-y-10 ">
+    <>
+      <CanvasCursor />
+      <main className="relative flex flex-col min-h-[100dvh] space-y-10 ">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -284,5 +287,6 @@ export default function Page() {
         </div>
       </section>
     </main>
+    </>
   );
 }
