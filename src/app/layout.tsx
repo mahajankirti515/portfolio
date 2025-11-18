@@ -16,14 +16,7 @@ const fontSans = Inter({
 import "./globals.css";
 
 // Performance monitoring component
-function PerformanceMonitor() {
-  if (typeof window !== 'undefined') {
-    import('@/hooks/use-performance').then(({ usePerformance }) => {
-      usePerformance();
-    });
-  }
-  return null;
-}
+const PerformanceMonitor = () => null;
 
 
 

@@ -22,7 +22,7 @@ const MemoizedBadge = memo(Badge);
 const MemoizedAvatar = memo(Avatar);
 
 // Memoized sections
-const HeroSection = memo(() => {
+const HeroSection = memo(function HeroSection() {
   const firstName = useMemo(() => DATA.name.split(" ")[0], []);
   
   return (
@@ -54,7 +54,7 @@ const HeroSection = memo(() => {
   );
 });
 
-const AboutSection = memo(() => {
+const AboutSection = memo(function AboutSection() {
   const scrollToSection = useMemo(() => (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -116,7 +116,7 @@ const AboutSection = memo(() => {
   );
 });
 
-const WorkSection = memo(() => {
+const WorkSection = memo(function WorkSection() {
   const workItems = useMemo(() => DATA.work, []);
   
   return (
@@ -149,7 +149,7 @@ const WorkSection = memo(() => {
   );
 });
 
-const EducationSection = memo(() => {
+const EducationSection = memo(function EducationSection() {
   const educationItems = useMemo(() => DATA.education, []);
   
   return (
@@ -180,7 +180,7 @@ const EducationSection = memo(() => {
   );
 });
 
-const SkillsSection = memo(() => {
+const SkillsSection = memo(function SkillsSection() {
   const skills = useMemo(() => DATA.skills, []);
   
   return (
@@ -201,7 +201,7 @@ const SkillsSection = memo(() => {
   );
 });
 
-const ProjectsSection = memo(() => {
+const ProjectsSection = memo(function ProjectsSection() {
   const projects = useMemo(() => DATA.projects, []);
   
   return (
@@ -254,7 +254,7 @@ const ProjectsSection = memo(() => {
   );
 });
 
-const ContactSection = memo(() => (
+const ContactSection = memo(function ContactSection() { return (
   <section id="contact">
     <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
       <MemoizedBlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -290,9 +290,9 @@ const ContactSection = memo(() => (
       </MemoizedBlurFade>
     </div>
   </section>
-));
+); });
 
-const Page = memo(() => {
+const Page = memo(function Page() {
   return (
     <main className="relative flex flex-col min-h-[100dvh] space-y-10">
       <HeroSection />
