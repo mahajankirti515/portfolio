@@ -1,5 +1,21 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+
+// Education icon mapping
+const getEducationIcon = (iconName: string) => {
+  switch (iconName) {
+    case 'university':
+      return <Icons.university className="size-full" />;
+    case 'college':
+      return <Icons.college className="size-full" />;
+    case 'school':
+      return <Icons.school className="size-full" />;
+    case 'graduationCap':
+      return <Icons.graduationCap className="size-full" />;
+    default:
+      return <Icons.graduationCap className="size-full" />;
+  }
+};
 // k
 export const DATA = {
   name: "Kirti Wankhede",
@@ -188,23 +204,21 @@ export const DATA = {
       school: "Seva Sadan Mahavidyalaya Burhanpur",
       href: "https://sevasadancollege.com/",
       degree: "Bachelor of Computer Application (BCA)",
-      logoUrl: "/graduation-cap.mp4",
+      logoUrl: "/sevasadan.jpg",
       start: "2020",
       end: "2023",
     },
     {
       school: "Govt.H.S.School Bambhada, Burhanpur",
-      // href: "https://sevasadancollege.com/",
       degree: "12th (Math Science)",
-      logoUrl: "/school.mp4",
+      logoUrl: "/govt.jpg",
       start: "2019",
       end: "2020",
     },
     {
       school: "Govt.H.S.School Bambhada, Burhanpur",
-      // href: "https://sevasadancollege.com/",
       degree: "10th",
-      logoUrl: "/school.mp4",
+      logoUrl: "/govt.jpg",
       start: "2017",
       end: "2018",
     },

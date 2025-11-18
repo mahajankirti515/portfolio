@@ -5,13 +5,25 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 
 const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  preload: true,
 });
 import "./globals.css";
+
+// Performance monitoring component
+function PerformanceMonitor() {
+  if (typeof window !== 'undefined') {
+    import('@/hooks/use-performance').then(({ usePerformance }) => {
+      usePerformance();
+    });
+  }
+  return null;
+}
 
 
 
@@ -58,6 +70,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
@@ -66,10 +84,15 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
+            <Suspense fallback={<div className="min-h-screen bg-background animate-pulse" />}>
+              {children}
+            </Suspense>
+            <Suspense fallback={null}>
+              <Navbar />
+            </Suspense>
           </TooltipProvider>
         </ThemeProvider>
+        <PerformanceMonitor />
       </body>
     </html>
   );
