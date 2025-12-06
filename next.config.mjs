@@ -13,6 +13,10 @@ const nextConfig = {
   generateEtags: false,
   swcMinify: true,
   reactStrictMode: true,
+  optimizeFonts: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 }
 
 export default nextConfig;

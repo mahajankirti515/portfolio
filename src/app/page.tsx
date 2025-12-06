@@ -16,7 +16,7 @@ const ResumeCard = lazy(() => import("@/components/resume-card").then(m => ({ de
 const TracingBeam = lazy(() => import("@/components/ui/tracing-beam").then(m => ({ default: m.TracingBeam })));
 import SeeMoreButton from "@/components/SeeMoreButton";
 
-const BLUR_FADE_DELAY = 0.04;
+const BLUR_FADE_DELAY = 0.02;
 
 // Memoized components
 const MemoizedBlurFadeText = memo(BlurFadeText);
@@ -49,7 +49,7 @@ const HeroSection = memo(function HeroSection() {
           </div>
           <MemoizedBlurFade delay={BLUR_FADE_DELAY}>
             <MemoizedAvatar className="size-28 border">
-              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="scale-150" loading="eager" />
+              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="scale-150" loading="lazy" />
               <AvatarFallback>{DATA.initials}</AvatarFallback>
             </MemoizedAvatar>
           </MemoizedBlurFade>
@@ -135,7 +135,7 @@ const WorkSection = memo(function WorkSection() {
             key={work.company}
             delay={BLUR_FADE_DELAY * 6 + id * 0.05}
           >
-            <Suspense fallback={<div className="h-24 bg-muted animate-pulse rounded-lg" />}>
+            <Suspense fallback={null}>
               <ResumeCard
                 logoUrl={work.logoUrl}
                 altText={work.company}
@@ -170,7 +170,7 @@ const EducationSection = memo(function EducationSection() {
             key={education.school}
             delay={BLUR_FADE_DELAY * 8 + id * 0.05}
           >
-            <Suspense fallback={<div className="h-24 bg-muted animate-pulse rounded-lg" />}>
+            <Suspense fallback={null}>
               <ResumeCard
                 href={(education as any).href}
                 logoUrl={education.logoUrl}
@@ -229,7 +229,7 @@ const ProjectsSection = memo(function ProjectsSection() {
   
   return (
     <section id="projects">
-      <Suspense fallback={<div className="h-96 bg-muted animate-pulse rounded-lg" />}>
+      <Suspense fallback={null}>
         <TracingBeam>
           <div className="space-y-12 w-full py-12">
             <MemoizedBlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -255,7 +255,7 @@ const ProjectsSection = memo(function ProjectsSection() {
                   key={project.title}
                   delay={BLUR_FADE_DELAY * 12 + id * 0.05}
                 >
-                  <Suspense fallback={<div className="h-64 bg-muted animate-pulse rounded-lg" />}>
+                  <Suspense fallback={null}>
                     <ProjectCard
                       href={project.href}
                       title={project.title}
