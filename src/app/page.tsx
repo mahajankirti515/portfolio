@@ -1,5 +1,5 @@
 "use client";
-import { memo, useMemo, lazy, Suspense } from "react";
+import { memo, useMemo, lazy, Suspense, useState } from "react";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -7,11 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
+import OnekoCat from "@/components/OnekoCat";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 // Lazy load heavy components
 const ProjectCard = lazy(() => import("@/components/project-card").then(m => ({ default: m.ProjectCard })));
 const ResumeCard = lazy(() => import("@/components/resume-card").then(m => ({ default: m.ResumeCard })));
 const TracingBeam = lazy(() => import("@/components/ui/tracing-beam").then(m => ({ default: m.TracingBeam })));
+import SeeMoreButton from "@/components/SeeMoreButton";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -20,6 +23,8 @@ const MemoizedBlurFadeText = memo(BlurFadeText);
 const MemoizedBlurFade = memo(BlurFade);
 const MemoizedBadge = memo(Badge);
 const MemoizedAvatar = memo(Avatar);
+
+const { useState: useStateHook } = { useState };
 
 // Memoized sections
 const HeroSection = memo(function HeroSection() {
@@ -150,7 +155,9 @@ const WorkSection = memo(function WorkSection() {
 });
 
 const EducationSection = memo(function EducationSection() {
+  const [showAll, setShowAll] = useState(false);
   const educationItems = useMemo(() => DATA.education, []);
+  const displayedEducation = useMemo(() => showAll ? educationItems : educationItems.slice(0, 1), [showAll, educationItems]);
   
   return (
     <section id="education">
@@ -158,7 +165,7 @@ const EducationSection = memo(function EducationSection() {
         <MemoizedBlurFade delay={BLUR_FADE_DELAY * 7}>
           <h2 className="text-xl font-bold">Education</h2>
         </MemoizedBlurFade>
-        {educationItems.map((education, id) => (
+        {displayedEducation.map((education, id) => (
           <MemoizedBlurFade
             key={education.school}
             delay={BLUR_FADE_DELAY * 8 + id * 0.05}
@@ -175,6 +182,22 @@ const EducationSection = memo(function EducationSection() {
             </Suspense>
           </MemoizedBlurFade>
         ))}
+        {educationItems.length > 1 && (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mx-auto"
+          >
+            {showAll ? (
+              <>
+                Show less <ChevronUp className="size-4" />
+              </>
+            ) : (
+              <>
+                Show {educationItems.length - 1} more <ChevronDown className="size-4" />
+              </>
+            )}
+          </button>
+        )}
       </div>
     </section>
   );
@@ -202,7 +225,7 @@ const SkillsSection = memo(function SkillsSection() {
 });
 
 const ProjectsSection = memo(function ProjectsSection() {
-  const projects = useMemo(() => DATA.projects, []);
+  const projects = useMemo(() => DATA.projects.slice(0, 4), []);
   
   return (
     <section id="projects">
@@ -246,6 +269,9 @@ const ProjectsSection = memo(function ProjectsSection() {
                   </Suspense>
                 </MemoizedBlurFade>
               ))}
+            </div>
+            <div className="w-full flex justify-center mt-8">
+              <SeeMoreButton href="/projects" />
             </div>
           </div>
         </TracingBeam>
@@ -295,6 +321,7 @@ const ContactSection = memo(function ContactSection() { return (
 const Page = memo(function Page() {
   return (
     <main className="relative flex flex-col min-h-[100dvh] space-y-10">
+      <OnekoCat />
       <HeroSection />
       <AboutSection />
       <WorkSection />
