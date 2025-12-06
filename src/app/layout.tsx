@@ -12,6 +12,7 @@ const fontSans = Inter({
   variable: "--font-sans",
   display: "swap",
   preload: true,
+  adjustFontFallback: true,
 });
 import "./globals.css";
 
@@ -63,26 +64,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      </head>
+      <head />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <TooltipProvider delayDuration={0}>
-            <Suspense fallback={<div className="min-h-screen bg-background animate-pulse" />}>
-              {children}
-            </Suspense>
-            <Suspense fallback={null}>
-              <Navbar />
-            </Suspense>
+            {children}
+            <Navbar />
           </TooltipProvider>
         </ThemeProvider>
         <PerformanceMonitor />
