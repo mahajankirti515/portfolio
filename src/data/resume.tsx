@@ -254,25 +254,25 @@ projects: [
     video: "/setkorp-video.mp4"
   },
   {
-    title: "LegalZoom Clone",
-    href: "https://legalzoom-jet.vercel.app/",
-    dates: "Nov 2025",
+    title: "Boat X",
+    href: "https://boatx.vercel.app/",
+    dates: "Jan 2026",
     active: true,
-    description: "A comprehensive legal services platform clone featuring document preparation, business formation services, and legal consultation booking with modern UI/UX.",
-    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI"],
+    description: "A premium, cinematic website designed with a focus on visual excellence, featuring modern typography and glassmorphism effects.",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI", "Magic UI", "Framer Motion"],
     links: [
-      { type: "Website", href: "https://legalzoom-jet.vercel.app/", icon: <Icons.globe className="size-3" /> },
-      { type: "Source", href: "https://github.com/mahajankirti515/legalzoom", icon: <Icons.github className="size-3" /> }
+      { type: "Website", href: "https://boatx.vercel.app/", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/mahajankirti515/boatx", icon: <Icons.github className="size-3" /> }
     ],
     image: "",
-    video: "/legalzoom.mp4"
+    video: "/boatx.mp4"
   },
   {
     title: "Food-Delivery-App-like Zomato",
     href: "https://vingo-8hz8.onrender.com/",
     dates: "Aug 2025 - Sep 2025",
     active: true,
-    description: "A MERN stack-based food delivery application inspired by Swiggy and Zomato, featuring live order tracking, secure payments with Razorpay, and a responsive UI designed with React.js and TailwindCSS.",
+    description: "A MERN stack food delivery app featuring live order tracking, Razorpay payments, and a responsive UI.",
     technologies: ["React.js", "TailwindCSS", "Nodejs", "Express", "Mongodb", "Razorpay"],
     links: [
       { type: "Website", href: "https://vingo-8hz8.onrender.com", icon: <Icons.globe className="size-3" /> },
