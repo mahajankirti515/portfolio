@@ -318,18 +318,48 @@ const ContactSection = memo(function ContactSection() { return (
   </section>
 ); });
 
+// const Page = memo(function Page() {
+//   return (
+//     <main className="relative flex flex-col min-h-[100dvh] space-y-10">
+//       <OnekoCat />
+//       <HeroSection />
+//       <AboutSection />
+//       <WorkSection />
+//       <EducationSection />
+//       <SkillsSection />
+//       <ProjectsSection />
+//       <ContactSection />
+//     </main>
+//   );
+// });
 const Page = memo(function Page() {
   return (
-    <main className="relative flex flex-col min-h-[100dvh] space-y-10">
-      <OnekoCat />
-      <HeroSection />
-      <AboutSection />
-      <WorkSection />
-      <EducationSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-    </main>
+    <>
+      {/* 🚧 TEMPORARY HIDE START */}
+
+      {/*
+      <main className="relative flex flex-col min-h-[100dvh] space-y-10">
+        <OnekoCat />
+        <HeroSection />
+        <AboutSection />
+        <WorkSection />
+        <EducationSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+      */}
+
+      {/* 🚧 TEMPORARY HIDE END */}
+
+      {/* 👇 Show this instead */}
+      <div className="flex flex-col items-center justify-center h-screen text-center">
+        <h1 className="text-4xl font-bold mb-4">🚧 Website Under Maintenance</h1>
+        <p className="text-muted-foreground">
+          I’ll be back soon!
+        </p>
+      </div>
+    </>
   );
 });
 
